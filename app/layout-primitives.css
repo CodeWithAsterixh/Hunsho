@@ -1,0 +1,51 @@
+/* JEWELRY — LAYOUT PRIMITIVES & SIGNATURE MARKS */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-padding-y);
+}
+
+.section--ink {
+  background: var(--color-ink);
+  color: var(--color-text-on-ink);
+}
+.section--ink h1, .section--ink h2, .section--ink h3 { color: var(--color-text-on-ink); }
+.section--ink p { color: var(--color-text-on-ink-muted); }
+
+/*
+  .eyebrow and .step-index default to --color-accent-strong / ink-toned text,
+  tuned for light backgrounds — against --color-ink they fall well under
+  WCAG AA (~1.6:1). Swap to the soft accent / on-ink tokens instead.
+*/
+.section--ink .eyebrow { color: var(--color-accent-soft); }
+.section--ink .eyebrow::before { background: var(--color-accent-soft); }
+.section--ink .step-index { color: var(--color-text-on-ink-muted); }
+.section--ink .step-index em { color: var(--color-text-on-ink); }
+
+.section--surface { background: var(--color-surface); }
+.section--raised { background: var(--color-surface-raised); }
+
+/*
+  Signature mark: a single thin angled hairline, standing in for the facet
+  edge of a cut stone. Used once per section transition at most — never
+  stacked, never decorative filler. This replaces blob/gradient dividers.
+*/
+.facet-rule {
+  display: block;
+  width: 3rem;
+  height: var(--border-hairline);
+  background: currentColor;
+  transform: rotate(-8deg);
+  transform-origin: left center;
+}
+
+.facet-rule--vertical {
+  width: var(--border-hairline);
+  height: 3rem;
+  transform: rotate(8deg);
+}

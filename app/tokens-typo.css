@@ -1,0 +1,50 @@
+/*
+  JEWELRY — DESIGN SYSTEM TYPOGRAPHY TOKENS
+
+  PROVISIONAL pairing, chosen deliberately (not the default Playfair/Inter
+  combination):
+  - Display: Bodoni Moda — a high-contrast Didone serif. The thick/thin
+    stroke contrast reads as engraved precision at large sizes and gives
+    headlines the same "cut and polished" quality as the jewelry itself.
+  - Body: Manrope — a clean geometric-humanist sans, quiet enough to let
+    product copy and specs read easily at small sizes.
+  - Utility/mono: Space Mono — used only for eyebrows, SKU/carat/mm specs,
+    and hallmark-style labels. Its slightly engraved, stamped quality suits
+    stating precise facts (carat weight, dimensions, metal purity).
+*/
+:root {
+  /* --font-display / --font-body / --font-mono are defined in the
+     @theme inline block in globals.css (registers them as Tailwind
+     utilities AND plain CSS variables in one place — see comment there). */
+
+  /* Bodoni Moda variable-font optical size axis (fallback-safe) */
+  --font-display-settings-display: 'opsz' 60;
+  --font-display-settings-headline: 'opsz' 30;
+
+  /* Fluid type scale — clamp(min, preferred, max) */
+  --text-xs:   0.75rem;                                    /* 12px — captions, specs */
+  --text-sm:   0.8125rem;                                   /* 13px — meta, form hints */
+  --text-base: 1rem;                                        /* 16px — body */
+  --text-md:   1.125rem;                                    /* 18px — lead paragraphs */
+  --text-lg:   clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);      /* card / product titles */
+  --text-xl:   clamp(1.6rem, 1.4rem + 1vw, 2.1rem);          /* H3 */
+  --text-2xl:  clamp(2rem, 1.6rem + 1.8vw, 2.75rem);         /* H2 */
+  --text-3xl:  clamp(2.4rem, 1.8rem + 2.6vw, 3.5rem);        /* H1 (page) */
+  --text-4xl:  clamp(2.9rem, 2rem + 3.8vw, 5rem);            /* Hero H1 */
+  --text-5xl:  clamp(3.4rem, 2.1rem + 5.6vw, 7rem);          /* Hero display max */
+
+  --leading-tight:   1.02;
+  --leading-snug:    1.18;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.7;
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-widest: 0.16em; /* mono eyebrow / hallmark labels, uppercase only */
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+}

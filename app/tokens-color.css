@@ -1,0 +1,45 @@
+/*
+  JEWELRY — DESIGN SYSTEM COLOR TOKENS
+
+  PROVISIONAL: this is a starting palette, not a final brand decision.
+  Direction: "loupe & facet" — a quiet, precision-driven house rather than
+  a loud gold-and-glitter one. Warm near-black + bone neutrals carry almost
+  all of the interface; a single deep gemstone accent (not gold — gold-on-
+  luxury is the expected move) is spent sparingly on the things that matter:
+  primary actions, focus states, and one signature moment per page.
+  Swap these five hex values once the PRD/brand identity is confirmed —
+  every component below reads role tokens, never raw hex.
+*/
+:root {
+  /* Raw palette (reference only — components should use role tokens below) */
+  --palette-ink-950: #0F0D0A;   /* near-black, warm — "velvet tray" */
+  --palette-ink-800: #211D17;
+  --palette-ink-600: #4A443B;
+  --palette-pewter-500: #8B8578; /* brushed-metal neutral, NOT gold */
+  --palette-pewter-300: #C9C3B4;
+  --palette-bone-100: #F1EBDE;   /* warm ivory surface */
+  --palette-bone-50: #F8F5EE;    /* lightest surface */
+  --palette-white: #FFFFFF;
+  --palette-garnet-700: #5C2430; /* signature gemstone accent, spent sparingly */
+  --palette-garnet-500: #7A2F3D;
+  --palette-garnet-300: #B98A93;
+  --palette-alert-600: #8C3B2A;  /* form errors / urgent notices only */
+
+  /* Role tokens — components reference these, never the raw palette */
+  --color-bg: var(--palette-bone-100);
+  --color-surface: var(--palette-white);
+  --color-surface-raised: var(--palette-bone-50);
+  --color-ink: var(--palette-ink-950);
+  --color-ink-soft: var(--palette-ink-800);
+  --color-text-primary: var(--palette-ink-800);
+  --color-text-secondary: var(--palette-ink-600);
+  --color-text-on-ink: var(--palette-bone-50);
+  --color-text-on-ink-muted: var(--palette-pewter-300);
+  --color-border: var(--palette-pewter-300);
+  --color-border-strong: var(--palette-pewter-500);
+  --color-accent: var(--palette-garnet-500);
+  --color-accent-strong: var(--palette-garnet-700);
+  --color-accent-soft: var(--palette-garnet-300);
+  --color-alert: var(--palette-alert-600);
+  --color-focus-ring: var(--palette-garnet-500);
+}

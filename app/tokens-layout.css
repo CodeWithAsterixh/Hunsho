@@ -1,0 +1,65 @@
+/*
+  JEWELRY — DESIGN SYSTEM LAYOUT & MOTION TOKENS
+
+  Radii are deliberately near-flat. Rounded cards read as "generic SaaS/
+  Shopify template" — precision here comes from square edges and hairline
+  borders, the way a stone is set rather than a card is styled.
+*/
+:root {
+  /* Spacing — 4px base unit, generous at the high end (whitespace = quality) */
+  --space-1:  0.25rem;  /* 4px  */
+  --space-2:  0.5rem;   /* 8px  */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.5rem;   /* 24px */
+  --space-6:  2.25rem;  /* 36px */
+  --space-7:  3.5rem;   /* 56px */
+  --space-8:  5rem;     /* 80px */
+  --space-9:  7.5rem;   /* 120px */
+  --space-10: 10rem;    /* 160px */
+  --space-11: 13rem;    /* 208px */
+
+  --container-max: 1320px;
+  --container-padding: clamp(1.25rem, 1rem + 3vw, 4.5rem);
+  --section-padding-y: clamp(4.5rem, 3.5rem + 5.5vw, 10rem);
+
+  /* Radius & Borders — intentionally near-flat; luxury = precision, not softness */
+  --radius-xs:   1px;   /* chips, hairline tags */
+  --radius-sm:   2px;   /* inputs, buttons */
+  --radius-md:   2px;   /* cards, panels — same as sm, on purpose */
+  --radius-lg:   3px;   /* large media frames, sparingly */
+  --radius-full: 999px; /* small pills/avatars only — used rarely */
+
+  --border-hairline: 1px;
+  --border-thick: 1.5px;
+
+  /* Elevation — used only to communicate interactive state, never as decoration */
+  --shadow-sm: 0 1px 2px rgba(15, 13, 10, 0.08);
+  --shadow-md: 0 10px 24px rgba(15, 13, 10, 0.10);
+  --shadow-inset-hairline: inset 0 0 0 1px rgba(15, 13, 10, 0.08);
+
+  /* Sizing — components */
+  --size-button-height-md: 3rem;
+  --size-button-height-lg: 3.5rem;
+  --size-input-height: 3.25rem;
+  --size-icon-sm: 1rem;
+  --size-icon-md: 1.5rem;
+  --size-icon-lg: 2.5rem;
+  --size-avatar: 3rem;
+
+  /* Motion */
+  --ease-luxury: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 320ms;
+  --duration-slow: 600ms;
+
+  /* Z-Index Scale */
+  --z-base: 0;
+  --z-shape: 1;
+  --z-content: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+}

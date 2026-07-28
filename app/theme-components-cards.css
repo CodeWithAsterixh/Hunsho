@@ -1,0 +1,83 @@
+/* JEWELRY — CARDS, PRODUCT TILES & FORM FIELDS */
+.lead {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+}
+
+.card {
+  background: var(--color-surface);
+  border: var(--border-hairline) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  transition: transform var(--duration-base) var(--ease-luxury),
+              border-color var(--duration-base) var(--ease-standard);
+}
+.card:hover { transform: translateY(-2px); border-color: var(--color-border-strong); }
+
+/* Product tile: image-led, minimal chrome, no rounded corners on the image
+   frame — the photography is the content, the card is just a grid cell. */
+.card--product {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+.card--product:hover { transform: none; }
+.card--product .card--product__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--color-surface-raised);
+  overflow: hidden;
+}
+.card--product .card--product__frame img,
+.card--product .card--product__frame video {
+  transition: transform var(--duration-slow) var(--ease-luxury);
+}
+.card--product:hover .card--product__frame img,
+.card--product:hover .card--product__frame video {
+  transform: scale(1.035);
+}
+
+/* Force white text inside dark overlay card layouts (campaign banners, hero media) */
+.card-overlay-text h3 {
+  color: #ffffff !important;
+}
+.card-overlay-text p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.card-overlay-text span {
+  color: var(--color-accent-soft) !important;
+}
+.card-overlay-text a {
+  color: var(--color-accent-soft) !important;
+  text-decoration: none;
+}
+.card-overlay-text a:hover {
+  color: #ffffff !important;
+}
+
+.field {
+  height: var(--size-input-height);
+  width: 100%;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-sm);
+  border: var(--border-hairline) solid var(--color-border-strong);
+  background: var(--color-surface);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+.field:focus { border-color: var(--color-accent); }
+
+label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
